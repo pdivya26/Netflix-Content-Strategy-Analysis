@@ -2,8 +2,6 @@
 
 An interactive data analytics dashboard built using **Streamlit** to explore Netflix’s content strategy, growth trends, and distribution across genres and countries.
 
----
-
 ## Project Overview
 
 This project analyzes Netflix’s content dataset to uncover key insights about:
@@ -17,17 +15,13 @@ This project analyzes Netflix’s content dataset to uncover key insights about:
 
 The dashboard provides **interactive filters and dynamic insights**, allowing users to explore trends easily.
 
----
-
 ## Key Insights
 
 - Netflix’s content additions peaked around **2019–2020**, marking its most aggressive expansion phase  
 - **Movies dominate** the catalog, but TV Shows are steadily increasing  
 - The **United States leads** content production, with strong global contributions  
 - **Drama and International content** are the most common genres  
-- Majority of content is targeted toward **mature audiences (TV-MA)**  
-
----
+- Majority of content is targeted toward **mature audiences (TV-MA)**
 
 ## Tech Stack
 
@@ -35,8 +29,6 @@ The dashboard provides **interactive filters and dynamic insights**, allowing us
 - **Pandas**
 - **Streamlit**
 - **Plotly**
-
----
 
 ## Features
 
@@ -51,8 +43,6 @@ The dashboard provides **interactive filters and dynamic insights**, allowing us
   - Duration insights  
 - Automated insights based on filtered data  
 - Download filtered dataset  
-
----
 
 ## Implementation Screenshots
 
@@ -69,5 +59,3 @@ The dashboard provides **interactive filters and dynamic insights**, allowing us
 ## Acknowledgements
 
 Dataset inspired by Netflix catalog data available publicly for analysis and learning purposes.
-
----
