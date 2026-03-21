@@ -2,6 +2,8 @@
 
 A complete data analytics project showcasing data cleaning, exploratory analysis, and interactive dashboard development using real-world Netflix data.
 
+[**Check it out here!**](https://netflix-content-strategy-analytics-dashboard.streamlit.app/)
+
 ## Project Overview
 
 This project analyzes Netflix’s content dataset to uncover trends in content production, distribution, and growth. It demonstrates a complete data workflow — from data cleaning and exploratory analysis to building interactive dashboards for insight generation.
