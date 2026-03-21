@@ -49,7 +49,6 @@ st.markdown(f"""
     .stAlert {{
         background-color: #1a1a1a !important;
         border-radius: 0px !important;
-        border: 1px solid #333 !important;
     }}
 
     .stAlert p, .stAlert div {{
