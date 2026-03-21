@@ -20,6 +20,15 @@ st.markdown(f"""
         border-radius: 10px; 
         border-left: 5px solid {NETFLIX_RED}; 
     }}
+
+    /* Force Sharp Edges */
+    img, [data-testid="stMetric"], .stAlert, button, div[data-baseweb="tab-list"] button {{
+        border-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }}
     
     /* Target the Tab Labels Font and Size */
     div[data-baseweb="tab-list"] button[data-baseweb="tab"] {{
