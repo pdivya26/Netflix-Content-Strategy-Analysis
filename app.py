@@ -22,12 +22,11 @@ st.markdown(f"""
     }}
 
     /* Force Sharp Edges */
-    img, [data-testid="stMetric"], .stAlert, button, div[data-baseweb="tab-list"] button {{
+    [data-testid="stSidebar"] img {{
         border-radius: 0px !important;
-        border-top-left-radius: 0px !important;
-        border-top-right-radius: 0px !important;
-        border-bottom-left-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
+        border: none !important;
+        /* Ensure no "soft" edges from shadows or padding */
+        box-shadow: none !important;
     }}
     
     /* Target the Tab Labels Font and Size */
