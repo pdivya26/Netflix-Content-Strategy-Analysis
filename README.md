@@ -63,6 +63,8 @@ This dashboard provides a business-focused analytical view, complementing the St
 
 <img width="1919" height="905" alt="NA4" src="https://github.com/user-attachments/assets/2d7f9e7f-e26d-4ea2-9b24-d8da383c0774" />
 
+<img width="1919" height="903" alt="NA5" src="https://github.com/user-attachments/assets/3e000ced-8b65-47cb-80bd-7ed001569875" />
+
 <img width="1279" height="718" alt="NADB" src="https://github.com/user-attachments/assets/c3cbbd68-af63-463d-906e-31cae8a0c003" />
 
 ## Setup Instructions 
