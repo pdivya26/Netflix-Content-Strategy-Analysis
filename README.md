@@ -39,11 +39,11 @@ This dashboard provides a business-focused analytical view, complementing the St
 ## Key Insights
 
 - Movies dominate (~70%) vs TV shows (~30%), showing **heavier focus on film content**.
-**Drama and Comedy are the leading genres**, driving the majority of engagement.
-Content growth accelerated sharply **post-2016, peaking around 2019–2020**.
-**United States** contributes the most titles, followed by **India** and the **UK**.
-Peak content additions occur **mid-to-late year (July–October, December)**.
-**TV-MA is the most common rating**, signaling a strong mature-audience focus.
+- **Drama and Comedy are the leading genres**, driving the majority of engagement.
+- Content growth accelerated sharply **post-2016, peaking around 2019–2020**.
+- **United States** contributes the most titles, followed by **India** and the **UK**.
+- Peak content additions occur **mid-to-late year (July–October, December)**.
+- **TV-MA is the most common rating**, signaling a strong mature-audience focus.
 
 ## Strategic Recommendations
 - **Increase investment in high-performing genre**s (Drama, Comedy) while testing niche categories for diversification.
