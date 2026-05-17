@@ -1,43 +1,51 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from streamlit_theme import st_theme
 
 # ---- 1. Page Config & Brand Styling ----
 st.set_page_config(page_title="Netflix Content Strategy Analysis Dashboard", layout="wide")
 
 NETFLIX_RED = "#E50914"
-px.defaults.template = "plotly_dark"
-# Setting the default color for all bar/histogram charts to Red
+
+# --- Dynamic Theme Detection ---
+theme = st_theme()
+
+# Default to dark mode if detection hasn't initialized yet
+is_dark = True 
+if theme and theme.get("base") == "light":
+    is_dark = False
+
+# Set exact Hex Colors based on the detected theme
+metric_bg = "#1a1a1a" if is_dark else "#ffffff"
+main_text = "#ffffff" if is_dark else "#000000"
+alert_text = "#ffffff" if is_dark else "#31333F"
+shadow_color = "rgba(0,0,0,0.5)" if is_dark else "rgba(0,0,0,0.05)"
+
+# Adjust Plotly template dynamically
+px.defaults.template = "plotly_dark" if is_dark else "plotly_white"
 px.defaults.color_discrete_sequence = [NETFLIX_RED]
 
 # Custom CSS for Netflix Red Theme and Tab Fonts
 st.markdown(f""" 
     <style>
-    /* ------------------------------ */
-    /* Metric Card Bulletproof Styling */
-    /* ------------------------------ */
-    
-    /* Target the main container */
+    /* Metric Card Styling */
     [data-testid="stMetric"], 
     [data-testid="metric-container"] {{ 
-        background-color: var(--secondary-background-color) !important; 
+        background-color: {metric_bg} !important; 
         padding: 15px !important; 
         border-radius: 10px !important; 
         border-left: 5px solid {NETFLIX_RED} !important; 
         margin-top: 10px !important;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important; 
+        box-shadow: 0 4px 6px {shadow_color} !important; 
     }}
 
-    /* Force the Metric Label (Title) to adapt to Light/Dark Mode text color */
+    /* Metric Text Elements */
     [data-testid="stMetricLabel"] > div,
     [data-testid="stMetricLabel"] label,
-    [data-testid="stMetricLabel"] p {{
-        color: var(--text-color) !important;
-    }}
-
-    /* Force the Metric Value (The Number) to adapt to Light/Dark Mode text color */
+    [data-testid="stMetricLabel"] p,
     [data-testid="stMetricValue"] > div {{
-        color: var(--text-color) !important;
+        color: {main_text} !important;
     }}
     
     /* Force Sharp Edges */
@@ -55,7 +63,7 @@ st.markdown(f"""
         margin-right: 10px !important;
         margin-bottom: 15px !important;
         border-radius: 8px !important;
-        color: var(--text-color) !important;
+        color: {main_text} !important;
     }}
 
     /* Active Tab Red Highlight */
@@ -65,13 +73,13 @@ st.markdown(f"""
         font-weight: bold;
     }}
 
-    /* Font colors of insights */
+    /* Font colors of insights (st.info, st.success, etc.) */
     .stAlert {{
         border-radius: 0px !important;
     }}
 
     .stAlert p, .stAlert div {{
-        color: var(--text-color) !important; 
+        color: {alert_text} !important; 
         font-size: 16px !important;
         font-weight: 500 !important;
     }}
