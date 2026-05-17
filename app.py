@@ -17,7 +17,7 @@ if theme and theme.get("base") == "light":
     is_dark = False
 
 # Set exact Hex Colors based on the detected theme
-metric_bg = "#1a1a1a" if is_dark else "#ffffff"
+metric_bg = "#1a1a1a" if is_dark else "#e6e6e6"
 main_text = "#ffffff" if is_dark else "#000000"
 alert_text = "#ffffff" if is_dark else "#31333F"
 shadow_color = "rgba(0,0,0,0.5)" if is_dark else "rgba(0,0,0,0.05)"
