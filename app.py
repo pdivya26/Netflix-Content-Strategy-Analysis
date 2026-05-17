@@ -13,22 +13,37 @@ px.defaults.color_discrete_sequence = [NETFLIX_RED]
 # Custom CSS for Netflix Red Theme and Tab Fonts
 st.markdown(f""" 
     <style>
-    /* Metric Card Styling */
-    /* Using Streamlit's native theme variables to support light/dark mode */
-    [data-testid="stMetric"] {{ 
-        background-color: var(--secondary-background-color); 
-        padding: 15px; 
-        border-radius: 10px; 
-        border-left: 5px solid {NETFLIX_RED}; 
-        margin-top: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for better pop in light mode */
+    /* ------------------------------ */
+    /* Metric Card Bulletproof Styling */
+    /* ------------------------------ */
+    
+    /* Target the main container */
+    [data-testid="stMetric"], 
+    [data-testid="metric-container"] {{ 
+        background-color: var(--secondary-background-color) !important; 
+        padding: 15px !important; 
+        border-radius: 10px !important; 
+        border-left: 5px solid {NETFLIX_RED} !important; 
+        margin-top: 10px !important;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important; 
+    }}
+
+    /* Force the Metric Label (Title) to adapt to Light/Dark Mode text color */
+    [data-testid="stMetricLabel"] > div,
+    [data-testid="stMetricLabel"] label,
+    [data-testid="stMetricLabel"] p {{
+        color: var(--text-color) !important;
+    }}
+
+    /* Force the Metric Value (The Number) to adapt to Light/Dark Mode text color */
+    [data-testid="stMetricValue"] > div {{
+        color: var(--text-color) !important;
     }}
     
     /* Force Sharp Edges */
     [data-testid="stSidebar"] img {{ 
         border-radius: 0px !important;
         border: none !important;
-        /* Ensure no "soft" edges from shadows or padding */
         box-shadow: none !important;
     }}
     
@@ -40,7 +55,7 @@ st.markdown(f"""
         margin-right: 10px !important;
         margin-bottom: 15px !important;
         border-radius: 8px !important;
-        color: var(--text-color) !important; /* Adapted for Light/Dark mode */
+        color: var(--text-color) !important;
     }}
 
     /* Active Tab Red Highlight */
@@ -56,7 +71,7 @@ st.markdown(f"""
     }}
 
     .stAlert p, .stAlert div {{
-        color: var(--text-color) !important; /* Fixed missing semicolon and adapted to theme */
+        color: var(--text-color) !important; 
         font-size: 16px !important;
         font-weight: 500 !important;
     }}
